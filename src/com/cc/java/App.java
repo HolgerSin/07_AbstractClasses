@@ -1,8 +1,13 @@
 package com.cc.java;
+
 public class App {
     public static void main(String[] args) {
-      // to do
+     
+    Rectangle rectangle  = new Rectangle(10.0,10.0);
     
+
+    ausgabe("Fläche Rechteck: " + rectangle.area());
+
 
     }
 
