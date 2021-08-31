@@ -8,12 +8,26 @@ public class App {
     Circle circle = new Circle(5.0);
     
     ausgabe("------  Flächen ------");
+
     ausgabe("Fläche Rechteck: " + rectangle.area());
     ausgabe("Fläche Dreieck: " + triangle.area());
     ausgabe("Fläche Kreis: " + circle.area());
 
-
+    ausgabe("------  Differenzen ------");
+    ausgabe("Diff. r-t: " + areaDiff(rectangle, triangle));
+    ausgabe("Diff. r-c: " + areaDiff(rectangle, circle));
+    // ausgabe("Diff. c-t: " + areaDiff(circle, triangle));
     }
+
+    private static double areaDiff(Rectangle r, Triangle t){
+        return r.area() - t.area();
+    }
+
+    // Überladene Methode
+    private static double areaDiff(Rectangle r, Circle c){
+        return r.area() - c.area();
+    }
+
 
     private static void ausgabe(String outStr) {
         System.out.println(outStr);
