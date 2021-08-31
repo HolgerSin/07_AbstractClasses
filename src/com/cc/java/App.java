@@ -16,18 +16,12 @@ public class App {
     ausgabe("------  Differenzen ------");
     ausgabe("Diff. r-t: " + areaDiff(rectangle, triangle));
     ausgabe("Diff. r-c: " + areaDiff(rectangle, circle));
-    // ausgabe("Diff. c-t: " + areaDiff(circle, triangle));
+    ausgabe("Diff. c-t: " + areaDiff(circle, triangle));
     }
 
-    private static double areaDiff(Rectangle r, Triangle t){
-        return r.area() - t.area();
+    private static double areaDiff(Shape s1, Shape s2){
+        return s1.area() - s2.area();
     }
-
-    // Überladene Methode
-    private static double areaDiff(Rectangle r, Circle c){
-        return r.area() - c.area();
-    }
-
 
     private static void ausgabe(String outStr) {
         System.out.println(outStr);
